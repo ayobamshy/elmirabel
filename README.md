@@ -84,24 +84,4 @@ Please ensure your code follows the existing style and structure.
 [Specify your license here, e.g., MIT, Apache 2.0, etc.]
 See the [LICENSE](LICENSE) file for details.
 
-## Support & Contact
-
-For questions, support, or business inquiries, contact:
-
-- Phone: +234 (0) 803 712 7834
-- Email: elmirabel-wines@gmail.com
-
-Or visit us at:
-
-Amaka's mall,  
-9 Sani Zangon - Daura St,  
-Guzape, Abuja
-
-Follow us on social media:
-
-- [Instagram](https://www.instagram.com/sip_elmirabelwines)
-- Facebook, Twitter (links in the footer)
-
----
-
 > _This documentation was generated based on the source code and file structure of the project._
