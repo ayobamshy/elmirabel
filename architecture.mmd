@@ -1,0 +1,28 @@
+```mermaid
+architecture-beta
+    group frontend(cloud)[Frontend]
+    group backend(server)[Backend]
+    group data(database)[Data]
+
+    service html(file)[HTML Pages] in frontend
+    service css(file)[CSS Styles] in frontend
+    service js(file)[JavaScript Scripts] in frontend
+    service images(disk)[Images] in frontend
+
+    service catalogLogic(server)[Catalog Logic] in backend
+    service cartLogic(server)[Cart Logic] in backend
+    service checkoutLogic(server)[Checkout Logic] in backend
+
+    service catalogData(database)[Catalog Data] in data
+    service cartData(database)[Cart Data] in data
+
+    html:B -- T:js
+    js:B -- T:catalogLogic
+    js:B -- T:cartLogic
+    js:B -- T:checkoutLogic
+    catalogLogic:B -- T:catalogData
+    cartLogic:B -- T:cartData
+    checkoutLogic:B -- T:cartData
+    html:B -- T:css
+    html:B -- T:images
+```

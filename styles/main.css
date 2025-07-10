@@ -13,17 +13,17 @@
     display: flex;
     justify-content: space-around;
     background-color: aliceblue;
+    flex-wrap: wrap;
     /* border: 2px red solid; */
 }
 
 #welcome-message {
     width: 33%;
+    min-width: 300px;
     display: flex;
-    /* Declare welcome note as flex container with main axis on the column */
     flex-direction: column;
     align-items: center;
     font-family: lobster;
-
     /* border: 2px red solid; */
 }
 
@@ -44,14 +44,35 @@
     font-size: 20px;
     background-color: antiquewhite;
     text-align: center;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+#shop-now:hover {
+    background: #e6d8b8;
+    color: #222;
+    transform: scale(1.07);
 }
 
 /* Wine images on home page */
 article img {
-    height: 100%;
-    width: 280px;
+    height: auto;
+    width: 100%;
+    max-width: 280px;
     border-radius: 20px;
-
     /* border: 2px red solid; */
+}
+
+@media (max-width: 900px) {
+    #main {
+        flex-direction: column;
+        align-items: center;
+    }
+    #welcome-message {
+        width: 90%;
+        min-width: 200px;
+    }
+    article img {
+        max-width: 90vw;
+    }
 }
 

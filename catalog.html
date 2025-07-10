@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog</title>
-    <link rel="stylesheet" href="./styles/header-footer.css" />
-    <link rel="stylesheet" href="./styles/catalog.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog</title>
+  <link rel="stylesheet" href="./styles/header-footer.css" />
+  <link rel="stylesheet" href="./styles/catalog.css">
 </head>
+
 <body>
   <header>
     <img id="logo" src="./images/index/logo.jpeg" alt="logo" />
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
-        <li class="nav-lists"><a class="nav-links" href="index.html">Home</a></li>
+        <li class="nav-lists"><a class="nav-links" href="index.html" aria-current="page">Home</a></li>
         <li class="nav-lists" lang="en">
           <a class="nav-links" href="catalog.html">Shop</a>
         </li>
@@ -27,21 +29,32 @@
         </li>
       </ul>
     </nav>
-    <a href="cart.html">
-      <img id="cart-image" src="./images/index/cart3.png" alt="shopping-cart-image" />
-      <span>5</span>
+    <a href="cart.html" aria-label="View shopping cart">
+      <img id="cart-image" src="./images/index/cart3.png" alt="shopping cart" />
+      <span aria-label="Items in cart">5</span>
     </a>
   </header>
-  <div class="js-catalog-container catalog-container">
-  </div>
+  <section class="catalog-controls"
+    style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: center; margin: 1.5rem 0;">
+    <input type="text" id="searchInput" placeholder="Search wines by name..." aria-label="Search wines by name"
+      style="padding: 0.5rem; font-size: 1rem; min-width: 200px;">
+    <select id="priceFilter" aria-label="Filter by price" style="padding: 0.5rem; font-size: 1rem;">
+      <option value="all">All Prices</option>
+      <option value="0-7000000">Below NGN 7,000,000</option>
+      <option value="7000000-8000000">NGN 7,000,000 - 8,000,000</option>
+      <option value="8000000-9000000">NGN 8,000,000 - 9,000,000</option>
+      <option value="9000000+">Above NGN 9,000,000</option>
+    </select>
+  </section>
+  <div class="js-catalog-container catalog-container"></div>
   <footer>
-    <nav>
+    <nav aria-label="Footer navigation">
       <ul>
         <li lang="en"><a href="catalog.html">Shop</a></li>
         <li lang="en"><a href="reservation.html">Contact us</a></li>
       </ul>
     </nav>
-    <nav>
+    <nav aria-label="Footer secondary navigation">
       <ul>
         <li><a href="reservation.html">Reservation</a></li>
         <li><a href="events.html">Events</a></li>
@@ -50,14 +63,14 @@
     <section>
       <p>Follow Us</p>
       <aside>
-        <a href="https://www.instagram.com/sip_elmirabelwines">
-          <img src="./images/index/instagram.png" alt="instagram-icon" />
+        <a href="https://www.instagram.com/sip_elmirabelwines" aria-label="Instagram">
+          <img src="./images/index/instagram.png" alt="Instagram icon" />
         </a>
-        <a href="#">
-          <img src="./images/index/facebook.png" alt="facebook-icon" />
+        <a href="#" aria-label="Facebook">
+          <img src="./images/index/facebook.png" alt="Facebook icon" />
         </a>
-        <a href="#"> 
-          <img src="./images/index/twitter.png" alt="twitter-icon" />
+        <a href="#" aria-label="Twitter">
+          <img src="./images/index/twitter.png" alt="Twitter icon" />
         </a>
       </aside>
       <section>
@@ -69,9 +82,9 @@
       </section>
     </section>
     <section>
-      <p>+234 (0) 803 712 7834</p>
-      <p>elmirabel-wines@gmail.com</p>
-      <img src="./images/index/location.png" alt="location" />
+      <p><span aria-label="Phone number">+234 (0) 803 712 7834</span></p>
+      <p><a href="mailto:elmirabel-wines@gmail.com" aria-label="Email">elmirabel-wines@gmail.com</a></p>
+      <img src="./images/index/location.png" alt="Location icon" aria-hidden="true" />
       <address>
         Amaka's mall,<br />
         9 Sani Zangon - Daura St,<br />
@@ -80,6 +93,8 @@
     </section>
   </footer>
   <script src="./data/catalog.js"></script>
+  <script src="./scripts/cart.js"></script>
   <script src="./scripts/catalog.js"></script>
 </body>
+
 </html>

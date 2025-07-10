@@ -1,0 +1,43 @@
+# VS Code settings
+.vscode/
+
+# Node modules
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+/dist/
+/build/
+
+# Environment files
+.env
+.env.*
+
+# Test coverage
+coverage/
+
+# Misc
+*.log
+*.tmp
+*.swp
+
+# Mac system files
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Desktop.ini
+$RECYCLE.BIN/
+
+# Byebug command history
+.byebug_history
+
+package-lock.json

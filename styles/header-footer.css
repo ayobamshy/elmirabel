@@ -7,33 +7,32 @@
 
 /* Header banner styling */
 header {
-    /* Spread the content of the header horizontally */
     display: flex;
     align-items: center;
     background-color: rgb(247, 241, 241);
-    /* Stick the header banner to the top of the screen */
     position: sticky;
     top: 0px;
+    flex-wrap: wrap;
 }
 
 #logo {
     height: 120px;
+    max-width: 90vw;
 }
 
 header nav {
-    /* Center the nav to grow into space i.e. flex-grow: 1;*/
     flex: 1;
     text-align: center;
     padding: 30px;
+    min-width: 200px;
 }
 
 /* Flatten header nav unordered links list
 and put in a re-usable class */
 .nav-lists {
-    display: inline;
-    margin-right: 30px;
-    margin-left: 30px;
-    font-size: 20px;
+    display: inline-block;
+    margin: 10px 15px;
+    font-size: 18px;
 }
 
 .nav-links, span {
@@ -54,12 +53,34 @@ span {
 /* Page Footer */
 footer {
     display: flex;
-    /* Put some space between and around flex items */
+    flex-wrap: wrap;
     justify-content: space-around;
-    /* Align items across non-main axis i.e. cross axis */
     align-items: center;
     background-color: rgb(247, 241, 241);
-    height: 250px;
+    min-height: 200px;
+    padding: 20px 0;
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #logo {
+        height: 80px;
+    }
+    header nav {
+        padding: 10px;
+    }
+    .nav-lists {
+        font-size: 16px;
+        margin: 8px 5px;
+    }
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
 }
 
 /* Remove bullets from list */
